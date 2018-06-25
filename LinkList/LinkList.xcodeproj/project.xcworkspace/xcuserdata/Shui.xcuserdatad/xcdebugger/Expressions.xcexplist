@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "listDelete:main.c">
+      </ContextState>
+      <ContextState
+         contextName = "main:main.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "la.next-&gt;next-&gt;data">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "mergeList:main.c">
+      </ContextState>
+      <ContextState
+         contextName = "PrintList_L:main.c">
+      </ContextState>
+      <ContextState
+         contextName = "CreateList_L:main.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "L-&gt;next-&gt;next-&gt;next">
+            </PersistentString>
+            <PersistentString
+               value = "L-&gt;next-&gt;next-&gt;data">
+            </PersistentString>
+            <PersistentString
+               value = "L-&gt;next-&gt;data">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
