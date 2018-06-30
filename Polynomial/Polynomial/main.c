@@ -29,10 +29,61 @@ Polynomial * createPolyn(int m);
 Status initPolyn(Polynomial *p);
 void printPolyn(Polynomial *p);
 void addPolyn(Polynomial *pa, Polynomial *pb);
+int cmp(ElemType a,ElemType b);
+
+//比较两个元素的指数，-1：a<b 0：a=b 1：a>b
+int cmp(ElemType a,ElemType b){
+    if (a.expn<b.expn) {
+        return -1;
+    }else if(a.expn>b.expn){
+        return 1;
+    }else{
+        return 0;
+    }
+}
 
 //多项式相加
 void addPolyn(Polynomial *pa, Polynomial *pb){
-    
+    Node *ha = pa;
+    Node *hb = pb;
+    Node *qa = pa->next;
+    Node *qb = pb->next;
+    while (qa&&qb) {
+        ElemType a = qa->elem;
+        ElemType b = qb->elem;
+        float sum;
+        switch (cmp(a, b)) {
+            case -1:
+                ha = qa;
+                qa = qa->next;
+                break;
+            case 0:
+                sum = a.coef+b.coef;
+                if (sum!=0.0) {
+                    qa->elem.coef = sum;
+                    ha = qa;
+                }else{
+                    //系数为0，这一项消除掉，删除多项式pa中的当前节点
+                    ha->next = qa->next;
+                    free(qa);
+                }
+                //删除pb中的第一项
+                hb->next = qb->next;
+                qb = qb->next;
+                free(qb);
+                break;
+            case 1:
+                //pa中的当前节点的指数大,pa中插入pb
+                ha->next = pb;
+                pb->next = pa;
+                pa = pb;
+                //删除b节点第一个数据
+                hb->next = pb->next;
+                pb = pb->next;
+                free(pb);
+                break;
+        }
+    }
 }
 
 //打印一元多项式
