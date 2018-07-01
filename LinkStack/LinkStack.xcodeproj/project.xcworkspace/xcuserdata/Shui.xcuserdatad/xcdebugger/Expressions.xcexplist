@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "stackTraverse:main.c">
+      </ContextState>
+      <ContextState
+         contextName = "main:main.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "s.top">
+            </PersistentString>
+            <PersistentString
+               value = "&amp;s">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "push:main.c">
+      </ContextState>
+      <ContextState
+         contextName = "getTop:main.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "s-&gt;top">
+            </PersistentString>
+            <PersistentString
+               value = "&amp;s">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
